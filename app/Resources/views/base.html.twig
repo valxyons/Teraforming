@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            {# ************ BLOCK META ************ #}
+            {% block meta %}
+                <meta charset="UTF-8" />
+
+            {% endblock %}
+
+            {# ************ BLOCK TITLE ************ #}
+            <title>
+                {% block title %}
+                    Teraforming -
+                {% endblock %}
+            </title>
+
+            {# ************ BLOCK CSS ************ #}
+            {% block css %}
+            {% endblock %}
+
+            {# ************ BLOCK FAVICON ************ #}
+            {% block favicon %}
+                <link rel="icon" type="image/x-icon" href="{{ asset('favicons/favicon.ico') }}" />
+            {% endblock %}
+
+        {% endblock %}
+    </head>
+    <body>
+    {% block body %}
+        {# ************ BLOCK HEADER ************ #}
+        {% block header %}
+        {% endblock %}
+
+        {# HTML HERE #}
+
+        {# ************ BLOCK FOOTER ************ #}
+        {% block footer %}
+        {% endblock %}
+
+    {% endblock %}
+
+    {% block javascripts %}
+    {% endblock %}
+
+    </body>
+</html>

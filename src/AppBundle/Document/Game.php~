@@ -1,0 +1,33 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: valentin
+ * Date: 25/08/16
+ * Time: 18:20
+ */
+namespace AppBundle\Document;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+
+/**
+ * @MongoDB\Document
+ */
+ class Game
+ {
+    /**
+     * @MongoDB\Id
+     */
+    protected $id;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $name;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $ucname;
+ 
+
+}

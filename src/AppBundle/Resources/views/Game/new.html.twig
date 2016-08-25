@@ -1,0 +1,67 @@
+{% extends 'admin/base.html.twig' %}
+
+{# ************ BLOCK HEAD ************ #}
+   {% block head %}
+       {# ************ BLOCK META ************ #}
+       {% block meta %}
+           {{ parent() }}
+
+       {% endblock %}
+
+       {# ************ BLOCK TITLE ************ #}
+       <title>
+           {% block title %}
+               {{ parent() }}
+               {#Title#}Game : add new
+           {% endblock %}
+       </title>
+
+       {# ************ BLOCK CSS ************ #}
+       {% block css %}
+           {{ parent() }}
+       {% endblock %}
+
+       {# ************ BLOCK FAVICON ************ #}
+       {% block favicon %}
+           {{ parent() }}
+           {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
+       {% endblock %}
+
+   {% endblock %}
+
+{# ************ BLOCK BODY ************ #}
+{% block body %}
+    {# ************ BLOCK HEADER ************ #}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+
+    {# HTML HERE #}
+    <h1>Game creation</h1>
+
+    <form action="{{ path('game_create') }}" method="post">
+        {{ form_widget(form) }}
+        <p>
+            <button type="submit">Create</button>
+        </p>
+    </form>
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('game') }}">
+                Back to the list
+            </a>
+        </li>
+    </ul>
+
+    {# ************ BLOCK FOOTER ************ #}
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+
+{% endblock %}
+
+{# ************ BLOCK JAVASCRIPTS ************ #}
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
