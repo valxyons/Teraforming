@@ -21,6 +21,11 @@
            {{ parent() }}
        {% endblock %}
 
+       {# ************ BLOCK FONTS ************ #}
+       {% block fonts %}
+           {{ parent() }}
+       {% endblock %}
+
        {# ************ BLOCK FAVICON ************ #}
        {% block favicon %}
            {{ parent() }}
@@ -38,7 +43,8 @@
 
     {# HTML HERE #}
     Page de test<br>
-    newline
+    newline<br>
+    <i class="fa fa-steam-square" aria-hidden="true"></i>
     {{ dump(test) }}
 
     {# ************ BLOCK FOOTER ************ #}

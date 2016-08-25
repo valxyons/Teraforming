@@ -19,6 +19,13 @@
             {% block css %}
             {% endblock %}
 
+            {# ************ BLOCK FONTS ************ #}
+            {% block fonts %}
+                <!-- ICON FONTS -->
+                <link rel="stylesheet" href="{{ asset('fonts/font-awesome-4.6.3/css/font-awesome.min.css')}}" type="text/css">
+
+            {% endblock %}
+
             {# ************ BLOCK FAVICON ************ #}
             {% block favicon %}
                 <link rel="icon" type="image/x-icon" href="{{ asset('favicons/favicon.ico') }}" />
@@ -42,6 +49,8 @@
 
     {% block javascripts %}
     {% endblock %}
+
+    {{ tinymce_init() }}
 
     </body>
 </html>
